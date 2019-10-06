@@ -24,21 +24,21 @@ serviceWorker.unregister()
 // Learn more about service workers: https://bit.ly/CRA-PWA
 */
 
-import React from "react"
-import ReactDOM from "react-dom"
-import emoji from "node-emoji"
-import App from "../src/containers/App"
-import store from "./store"
+import React from "react";
+import ReactDOM from "react-dom";
+import emoji from "node-emoji";
+import App from "../src/containers/App";
+import store from "./store";
 // import * as serviceWorker from "./serviceWorker"
-import "./index.css"
+import "./index.css";
 
 const render = () => {
-  fancyLog()
-  return ReactDOM.render(<App />, document.getElementById("root"))
-}
+  fancyLog();
+  return ReactDOM.render(<App />, document.getElementById("root"));
+};
 
-render()
-store.subscribe(render)
+render();
+store.subscribe(render);
 
 function fancyLog() {
   console.log(
@@ -46,7 +46,6 @@ function fancyLog() {
       ":heart: :heart: :heart: :star: :star: :star:"
     )}`,
     "background: purple; color: #fff"
-  )
-  console.log(store.getState())
+  );
+  // console.log(store.getState())
 }
-// registerServiceWorker()
